@@ -72,6 +72,9 @@ body {
     background-color: #d6d6d6;
     margin-top: 25px;
     color: #def;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .menu-option p {
     line-height: 440px;
