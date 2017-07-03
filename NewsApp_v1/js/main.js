@@ -4,7 +4,7 @@ $('.bxslider').bxSlider({
   minSlides: 3,
   maxSlides: 3,
   slideWidth: 360,
-  slideMargin: 10,
+  slideMargin: 1,
   moveSlides: 2,
   pager: false
 });
