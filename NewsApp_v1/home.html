@@ -8,7 +8,7 @@
 <div class="slider col-md-10 col-sm-10 col-xs-10" >
 
   <div class="row bxslider" ng-repeat="myNew in myNews | unique: 'cagtegory'" >
-          <div class="col-md-4"  ng-repeat="subset in myNews| filter: myNew.cagtegory ">
+          <div class="col-md-4 article-container"  ng-repeat="subset in myNews| filter: myNew.cagtegory ">
           <div class="col-md-12 img-wrapper">
           <img class="img-responsive display-img"  src="{{subset.urlToImage}}"/><a href="{{subset.url}}" target="_blank">
           <p class="col-md-12 slide-title">{{subset.title| limitTo: 75 }}{{subset.title.length > 75 ? '...' : ''}}</p></a>
