@@ -22,7 +22,8 @@ app.controller('mainCtrl', function($scope, $http, ajaxCall) {
             minSlides: 3,
             maxSlides: 3,
             slideWidth: 360,
-            slideMargin: 10
+            slideMargin: 10,
+            moveSlides: 2
         });
     }, 1000);
     $scope.ArticlestoShow = [];
