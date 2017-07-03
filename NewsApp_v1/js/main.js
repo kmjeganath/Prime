@@ -5,6 +5,7 @@ $('.bxslider').bxSlider({
   maxSlides: 3,
   slideWidth: 360,
   slideMargin: 10,
+  moveSlides: 2,
   pager: false
 });
 },1000);
