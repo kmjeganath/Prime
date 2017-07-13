@@ -1,0 +1,37 @@
+<div class="row wrapper-container">
+<div class="sidemenu col-md-2 col-sm-2 col-xs-2">
+<div class="menu-option" ng-repeat="myNew in myNews | unique: 'cagtegory'"> 
+<!-- myNews is a variable that holds the entire json data, unique is a filter that we have created and passing 'category' as a key -->
+     <p>{{myNew.cagtegory}}</p> <!-- It creates the list of categories in left side -->
+</div>
+</div>
+
+<div class="slider col-md-10 col-sm-10 col-xs-10" >
+ <!--  'bxslider' will take care of creation of divs based on categories, if the json has 10 unique category then it will create 10 divs and 'col-md-10' defines the size (almost 83% of the screen) -->
+  <div class="row bxslider" ng-repeat="myNew in myNews | unique: 'cagtegory'" > 
+ <!--  'article-container' will take care of creation of divs based on unique category, if entertainment has 10 article then it will create 10 divs and 'col-md-4' defines the size (33% in 83% of parent div)-->
+          <div class="col-md-4 article-container"  ng-repeat="subset in myNews| filter: myNew.cagtegory ">
+          <div class="col-md-12 img-wrapper"> <!-- It will occupy 100% in 33% --> 
+          <img class="img-responsive display-img"  src="{{subset.urlToImage}}"/><a href="{{subset.url}}" target="_blank">
+          <p class="col-md-12 slide-title">{{subset.title| limitTo: 75 }}{{subset.title.length > 75 ? '...' : ''}}
+<br>
+<span style="color:snow; font-weight:bold; font-size: 1rem; font-family: opensans-light,sans-serif; letter-spacing: 1px">{{subset.author}} | {{subset.publishedAt}}</span>
+          </p></a>
+           <p class="icons">
+         <i class="fa fa-bookmark" aria-hidden="true" ng-click="saved= !saved; isSaved(subset, $event) " ng-class="alreadyMarked(subset._id.$oid) "> </i>
+          <i class="fa fa-thumbs-o-up" aria-hidden="true" ng-click="liked(subset, $event) "></i>
+          <i class="fa fa-thumbs-o-down" aria-hidden="true" ng-click="disliked(subset, $event)"> </i>
+          </p>
+          </div><a href="{{subset.url}}" target="_blank">
+          <p class="col-md-12 slide-description">{{subset.description | limitTo: 160 }}{{subset.description.length > 160 ? '...' : ''}}</p></a>
+          </div>
+  </div>
+
+</div>
+</div>
+
+
+
+
+
+
