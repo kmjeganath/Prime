@@ -20,6 +20,7 @@ body {
 }
 .slider {
     float: right;
+    position: relative;
 }
 .sidemenu {
     float: left;
@@ -277,7 +278,37 @@ body {
     top: 24%;
     background: white;
     left: 15%;
+    width: 40%;
+}
+.display-popup ul{
+  list-style: none;
 }
 .fa-times{
   float: right;
+}
+.other-news{
+  float: right;
+  display: inline-block;
+  background: silver;
+}
+.author-name{
+  color:snow; 
+  font-weight:bold; 
+  font-size: 1rem; 
+  font-family: 'opensans-light','sans-serif'; 
+  letter-spacing: 1px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+  position: absolute;
+    top: 66%;
+    margin: 0px 0 0 72px;
+
+}
+.slider > .display-popup {
+  position: absolute;
+  top: 20%;
+  bottom: 10;
+  position:absolute;
+  top: 25%;
+  bottom: :25%;
+
 }

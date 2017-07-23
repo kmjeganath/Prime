@@ -9,6 +9,10 @@ $('.bxslider').bxSlider({
   pager: false
 });
 },1000);
+var div1 = document.getElementById('first');
+var div2 = document.getElementById('display-popup');
+
+div1.style.marginTop = div2.offsetTop;
 
 $('.slide-title').css('width',$('.display-img').width());
 	});
