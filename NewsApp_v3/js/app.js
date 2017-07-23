@@ -98,6 +98,15 @@ app.controller('mainCtrl',function($scope, $http, ajaxCall){ //main controller
 
   }
 
+$scope.othersDisplay =function(subset, $event){
+  $('.display-popup').toggleClass('hide');
+
+  console.log(subset.others)
+  $scope.othersdetails = subset.others
+}
+$scope.closePopup = function($event){
+  $($event.target).parent().toggleClass('hide');
+}
 $scope.liked = function(subset, $event){
     $($event.target).toggleClass('like');
     $($event.target).next().removeClass('dislike')
@@ -147,9 +156,10 @@ app.factory('ajaxCall', function($http){ //ajax call to fetch sample.json
       getMethod: function(){
         var getresult = $http({
               method: 'GET',
-                url:'data/sample1.json'
+                url:'data/verynew.json'
               }).then(function (response) {
               console.log("success")
+              console.log(response.data)
                 return response.data;
               }, function (response) {
                  console.log("failure");
