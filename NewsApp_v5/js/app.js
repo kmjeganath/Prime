@@ -109,6 +109,9 @@ $scope.othersDisplay =function(subset, $event){
   $('.display-popup').mouseleave(function() {
     $('.display-popup').addClass('hide');
   });
+  $('.bx-controls-direction a').mouseover(function(){
+    $('.display-popup').addClass('hide');
+  });
 
 
 
