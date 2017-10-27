@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="slider col-md-10 col-sm-10 col-xs-10">
-        <!--  'bxslider' will take care of creation of divs based on categories, if the json has 10 unique category then it will create 10 divs and 'col-md-10' defines the size (almost 83% of the screen) -->
+        <!--  'bxslider' will take care of creation of divs based on categories, if the json has 10 unique category then it will create 10 divss and 'col-md-10' defines the size (almost 83% of the screen) -->
         <div class="row bxslider" id="bxslider" ng-repeat="myNew in myNews | unique: 'category'">
             <!--  'article-container' will takesfdg care of creation of divs based on unique category, if entertainment has 10 article then it will create 10 divs and 'col-md-4' defines the size (33% in 83% of parent div)-->
             <div class="col-md-4 article-container" ng-repeat="subset in myNews| filter:{category:myNew.category}">
