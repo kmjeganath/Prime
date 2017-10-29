@@ -1,0 +1,10 @@
+<div class="login-page">
+  <div class="form">
+    <form class="login-form" method=POST action="{{ url_for('login') }}">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <button>login</button>
+      <p class="message"> Don't have an account?<a href="#/register">Sign up here</a>.</p>
+    </form>
+  </div>
+</div>

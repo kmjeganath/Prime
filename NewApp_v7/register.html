@@ -1,0 +1,11 @@
+<div class="login-page">
+  <div class="form">
+    <form class="login-form"  method=POST action="{{ url_for('register') }}">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <input type="email" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#/login">Sign In</a></p>
+    </form>
+  </div>
+</div> 
